@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Vinícius Campitelli, eu@viniciuscampitelli.com">
+
+        <title>Segurança mais prática</title>
+
+        <link rel="stylesheet" href="reveal.js/dist/reset.css">
+        <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+        <link rel="stylesheet" href="reveal.js/plugin/highlight/zenburn.css">
+        <link rel="stylesheet" href="reveal.js/dist/theme/white.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Noto+Sans:wght@400;700&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="first-slide">
+                    <h1>Segurança mais <span>prática</span></h1>
+                    <h2><span>Vinícius Campitelli @ PicPay</span></h2>
+                </section>
+
+                <section class="text-center">
+                    <h2 class="mb-0">Slides</h2>
+                    <img src="img/qrcode.jpg" class="r-stretch"><br>
+                    <a href="https://bit.ly/picpay-seguranca">
+                        bit.ly/picpay-seguranca
+                    </a>
+                </section>
+
+                <section> <!-- Sobre mim -->
+                    <section data-auto-animate>
+                        <h2>Sobre mim</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Sobre mim</h2>
+                        <div id="about-me">
+                            <div class="text-center mb-1">
+                                <img src="img/profile.jpg" alt="Vinícius Campitelli" id="profile-pic">
+                            </div>
+                            <ul class="margin margin-sm mb-1">
+                                <li>
+                                    Membro do <a href="https://phpsp.org.br" target="_blank" rel="noopener">PHPSP</a>
+                                </li>
+                                <li>Entusiasta em cibersegurança</li>
+                                <li>Desenvolvedor há 15 anos</li>
+                                <li>Consultor e instrutor de treinamentos em TI</li>
+                            </ul>
+                            <div id="profile-name">Vinícius Campitelli</div>
+                            <div class="about-me-links">
+                                <div>
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                              class="fill"></path>
+                                    </svg>
+                                    <div>
+                                        <p>Slides &amp; GitHub</p>
+                                        <a href="https://github.com/vcampitelli" target="_blank" rel="noopener">
+                                            vcampitelli
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                                              class="fill"></path>
+                                    </svg>
+                                    <div>
+                                        <p>Twitter</p>
+                                        <a href="https://twitter.com/vcampitelli" target="_blank" rel="noopener">
+                                            vcampitelli
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg role="img" viewBox="0 0 74 74" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                                                  class="fill"/>
+                                            <path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                                                  class="fill-bg"/>
+                                        </g>
+                                    </svg>
+                                    <div>
+                                        <p>LinkedIn</p>
+                                        <a href="https://linkedin.com/in/viniciuscampitelli" target="_blank"
+                                           rel="noopener">
+                                            Vinícius Campitelli
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section> <!-- Sobre mim -->
+
+                <section> <!-- Criptografia -->
+                    <section>
+                        <h2>Criptografia</h2>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Criptografia</h2>
+                        <h3>O que é?</h3>
+                        <blockquote class="fragment">
+                            a prática e o estudo de técnicas para comunicação segura na presença de terceiros
+                        </blockquote>
+                        <blockquote class="fragment">
+                            a construção e análise de protocolos que previnam terceiros de ler mensagens privadas
+                        </blockquote>
+                        <a href="https://pt.wikipedia.org/wiki/Criptografia" target="_blank" rel="noopener"
+                           class="fragment small">
+                            Wikipedia
+                        </a>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Criptografia</h2>
+                        <h3>O que é?</h3>
+                        <div class="d-flex align-start">
+                            <div class="block fragment flex-grow text-center" data-fragment-index="0">
+                                Texto plano
+                            </div>
+                            <div id="flow-cipher" class="fragment flex-grow" data-fragment-index="1">
+                                <div class="r-stack">
+                                    <span class="fragment fade-out" data-fragment-index="4">&rarr;</span>
+                                    <span class="fragment" data-fragment-index="4">&larr;</span><br>
+                                </div>
+                                <div class="r-stack">
+                                    <small class="smaller fragment fade-in-then-out" data-fragment-index="3">
+                                        Encriptação
+                                    </small>
+                                    <small class="smaller fragment" data-fragment-index="4">
+                                        Decriptação
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="block code r-stack fragment flex-grow" data-fragment-index="2">
+                                <code class="fragment plain fade-in-then-out" data-fragment-index="2">
+                                    Texto cifrado
+                                </code>
+                                <code class="fragment fade-up plain" data-fragment-index="3">
+                                    42a14c854faed
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Criptografia</h2>
+                        <h3>Objetivos principais</h3>
+                        <div class="d-flex">
+                            <div class="flex-grow">
+                                <h6 class="fragment" data-fragment-index="0">Confidencialidade</h6>
+                                <blockquote class="fragment small" data-fragment-index="2">
+                                    só o destinatário autorizado deve ser capaz de extrair o conteúdo da mensagem da sua
+                                    forma cifrada
+                                </blockquote>
+                                <br>
+                                <h6 class="fragment" data-fragment-index="0">Integridade</h6>
+                                <blockquote class="fragment small" data-fragment-index="3">
+                                    o destinatário deverá ser capaz de verificar se a mensagem foi alterada durante a
+                                    transmissão
+                                </blockquote>
+                            </div>
+                            <div class="flex-grow">
+                                <h6 class="fragment" data-fragment-index="0">Autenticidade</h6>
+                                <blockquote class="fragment small" data-fragment-index="4">
+                                    o destinatário deverá ser capaz de verificar que se o remetente é realmente quem diz
+                                    ser
+                                </blockquote>
+                                <br>
+                                <h6 class="fragment" data-fragment-index="1">Não-repúdio</h6>
+                                <blockquote class="fragment small" data-fragment-index="5">
+                                    não deverá ser possível ao remetente negar a autoria de sua mensagem
+                                </blockquote>
+                            </div>
+                        </div>
+                        <a href="https://pt.wikipedia.org/wiki/Criptografia#Vis%C3%A3o_geral:_objetivos"
+                           target="_blank" rel="noopener" class="fragment small" data-fragment-index="6">
+                            Wikipedia
+                        </a>
+                    </section>
+                </section>
+                <!-- Criptografia é -->
+
+                <section> <!-- Tipos de Criptografia -->
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h2>Tipos de Criptografia</h2>
+                    </section>
+
+                    <!-- Criptografia Simétrica -->
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Tipos de Criptografia</h2>
+                        <h3>Criptografia Simétrica</h3>
+                        <p class="fragment">
+                            Usa a mesma chave para os dois processos
+                        </p>
+                        <p class="fragment">Portanto, essa chave deve permanecer <b>secreta</b></p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Tipos</h4>
+                        <div class="d-flex half-columns">
+                            <div class="fragment">
+                                <h4>Cifras de Bloco</h4>
+                                <p>Operam com tamanho fixos de blocos de informação</p>
+                            </div>
+                            <div class="fragment">
+                                <h4>Cifras de Fluxo</h4>
+                                <p>Trabalham com qualquer <em>stream</em> de bits</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Algoritmos mais comuns</h4>
+                        <div class="d-flex half-columns mb-1">
+                            <div class="fragment">
+                                <h5 class="mb-0">Blowfish</h5>
+                                <p class="mt-0 small">
+                                    Deve-se usar os algoritmos relacionados Twofish and Threefish, por serem mais
+                                    seguros
+                                </p>
+                            </div>
+                            <div class="fragment">
+                                <h5 class="mb-0">DES <em class="small">(Data Encryption Standard)</em></h5>
+                                <p class="mt-0 small">
+                                    Que não deve ser usado mais (e nem o seu successor Triple DES)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex half-columns">
+                            <div class="fragment">
+                                <h5 class="mb-0">AES <em class="small">(Advanced Encryption Standard)</em></h5>
+                                <p class="mt-0 small">
+                                    Também conhecido pelo seu nome original Rijndael, foi aprovado pelo NSA para
+                                    encriptar informações confidenciais e é o mais recomendado
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Modos de Operação</h4>
+                        <p>Processo que será responsável por executar a cifra em cada um dos blocos</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Modos de Operação</h4>
+                        <p>
+                            O <b>Vetor de Inicialização (IV)</b> é um valor aleatório responsável por oferecer o estado
+                            inicial ao algoritmo e não pode ser reutilizado ou previsível
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Modos de Operação</h4>
+                        <p>Principais algoritmos</p>
+                        <ul>
+                            <li>Electronic codebook (ECB)</li>
+                            <li>Cipher block chaining (CBC)</li>
+                            <li>Cipher feedback (CFB)</li>
+                            <li>Counter (CTR)</li>
+                            <li>Galois/counter mode (GCM)</li>
+                            <li>Counter with cipher block chaining MAC (CCM)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Por que não: Electronic codebook (ECB)</h4>
+                        <div class="r-stack">
+                            <img class="fragment" src="img/ecb.jpg" style="max-height: 500px" data-fragment-index="0">
+                            <img class="fragment" src="img/ecb_original.jpg" style="max-height: 500px"
+                                 data-fragment-index="1">
+                        </div>
+                        <div class="text-center mb-0">
+                            <a href="https://www.pngpix.com/download/giraffe-png-transparent-image" target="_blank"
+                               rel="noopener"
+                               class="fragment smallest" data-fragment-index="1">
+                                pngpix.com
+                            </a>
+                        </div>
+                    </section>
+                    <section>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Por que não: CBC, CFB e CTR</h4>
+                        <p>Não oferecem integridade e autenticidade</p>
+                        <p class="fragment">Ou seja, não é possível saber se alguém alterou ou forjou a mensagem</p>
+                        <p class="fragment">Iremos saber mais ao falar de hashing</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica &#8250; Cifras de Bloco</h3>
+                        <h4>Modos de Operação</h4>
+                        <p>Algoritmos</p>
+                        <ul>
+                            <li class="fragment highlight-strikethrough" data-fragment-index="0">Electronic codebook
+                                (ECB)
+                            </li>
+                            <li class="fragment highlight-strikethrough" data-fragment-index="1">Cipher block chaining
+                                (CBC)
+                            </li>
+                            <li class="fragment highlight-strikethrough" data-fragment-index="1">Cipher feedback (CFB)
+                            </li>
+                            <li class="fragment highlight-strikethrough" data-fragment-index="1">Counter (CTR)</li>
+                            <li>Galois/counter (GCM)</li>
+                            <li>Counter with cipher block chaining MAC (CCM)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Cifras de Fluxo</h4>
+                        <p>Indicadas quando não se sabe o tamanho do dado</p>
+                        <div class="d-flex half-columns mb-1">
+                            <div class="fragment">
+                                <h5 class="mb-0">A5/1</h5>
+                                <span class="small">Usada no padrão GSM para comunicação móvel</span>
+                            </div>
+                            <div class="fragment">
+                                <h5 class="mb-0">RC4</h5>
+                                <span class="small">Usada no protocolo WEP para redes wireless</span>
+                            </div>
+                        </div>
+                        <div class="d-flex half-columns">
+                            <div class="fragment">
+                                <h5 class="mb-0">ChaCha</h5>
+                                <span class="small">A mais recomendada para uso hoje em dia</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Onde armazenar a chave?</h4>
+                        <p>
+                            Melhor opção é usar solução de <b>hardware</b>, mas pode ser caro e não estar disponível na
+                            infraestrutura
+                        </p>
+                        <p>Exemplos: HSM <em>(Hardware Security Module)</em> e TPM <em>(Trusted Platform Module)</em>
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Onde armazenar a chave?</h4>
+                        <p>Serviços do seu provedor de Cloud</p>
+                        <p>Exemplos: <em>AWS Key Management Service</em> e <em>Google Cloud Key Management</em></p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Onde armazenar a chave?</h4>
+                        <p>Para Kubernetes ou Swarm, checar as features de <em>Secrets</em>
+                        <p class="smaller">
+                            PS: o Kubernetes não criptografa os dados por padrão, então siga o artigo
+                            <a href="https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/" target="_blank"
+                               rel="noopener">Encrypting Secret Data at Rest</a>
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Onde armazenar a chave?</h4>
+                        <p>
+                            <a href="https://git-secret.io/" target="_blank" rel="noopener">git-secret</a> também é uma
+                            alternativa e acompanha o versionamento do seu código
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Simétrica</h3>
+                        <h4>Onde armazenar a chave?</h4>
+                        <p>
+                            Dependendo da criticidade da aplicação, você pode dividir a chave e colocar cada parte em
+                            uma localização diferente
+                        </p>
+                    </section>
+                    <!-- Criptografia Simétrica -->
+
+                    <!-- Criptografia Assimétrica -->
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h2 class="subtitle">Tipos de Criptografia</h2>
+                        <h3>Criptografia Assimétrica</h3>
+                        <p class="fragment mb-1" data-fragment-index="0">
+                            Utiliza duas chaves, sendo cada uma responsável por um dos processos
+                        </p>
+                        <div class="d-flex half-columns text-center">
+                            <div>
+                                <h5 class="fragment" data-fragment-index="1">Chave Pública</h5>
+                                <p class="fragment" data-fragment-index="3">Pode ser distribuída para outros</p>
+                            </div>
+                            <div>
+                                <h5 class="fragment" data-fragment-index="2">Chave Privada</h5>
+                                <p class="fragment" data-fragment-index="4">Deve permanecer com o portador</p>
+                            </div>
+                        </div>
+                        <p class="fragment">Também conhecida como <strong>Criptografia de chave pública</strong></p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Tipos de Criptografia</h2>
+                        <h3>Criptografia Assimétrica</h3>
+                        <p class="mb-1">Se você quer que terceiros se comuniquem com você...</p>
+                        <div class="d-flex half-columns text-center">
+                            <div>
+                                <h5>Chave Pública</h5>
+                                <p class="fragment" data-fragment-index="0">Usada por eles para escrevem para você</p>
+                                <p class="fragment" data-fragment-index="2">
+                                    &darr;<br>
+                                    Encriptação
+                                </p>
+                            </div>
+                            <div>
+                                <h5>Chave Privada</h5>
+                                <p class="fragment" data-fragment-index="1">Usada por você para ler o texto recebido</p>
+                                <p class="fragment" data-fragment-index="2">
+                                    &darr;<br>
+                                    Decriptação
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Tipos de Criptografia</h2>
+                        <h3>Criptografia Assimétrica</h3>
+                        <p class="mb-1">Se você quiser se comunicar com outros...</p>
+                        <div class="d-flex half-columns text-center">
+                            <div>
+                                <h5>Chave Pública</h5>
+                                <p class="fragment" data-fragment-index="1">
+                                    Usada por eles para verificar se o texto realmente veio de você
+                                </p>
+                                <p class="fragment" data-fragment-index="2">
+                                    &darr;<br>
+                                    Decriptação
+                                </p>
+                            </div>
+                            <div>
+                                <h5>Chave Privada</h5>
+                                <p class="fragment" data-fragment-index="0">
+                                    Usada por você para escrever textos
+                                </p>
+                                <p class="fragment" data-fragment-index="2">
+                                    &darr;<br>
+                                    Encriptação
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h3 class="subtitle">Criptografia Assimétrica</h3>
+                        <h4>Mas como pode uma chave ser usada para ler e outra para escrever?</h4>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Assimétrica</h3>
+                        <h4>Mas como pode uma chave ser usada para ler e outra para escrever?</h4>
+                        <p>
+                            O <b>RSA</b>, algoritmo bastante conhecido, depende de números semi-primos <em>(que são
+                            aqueles com exatamente dois números primos como fatores)</em> muito grandes
+                        </p>
+                        <p>
+                            A segurança desse algoritmo consiste na dificuldade computacional em fatorar esses
+                            números
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Assimétrica</h3>
+                        <h4>Mas como pode uma chave ser usada para ler e outra para escrever?</h4>
+                        <p>
+                            Outros algoritmos <em>(como ED25519)</em> são baseados em curvas elípticas: pontos
+                            gerados por equações cúbicas como <code>y² = x³ + ax + b</code>
+                        </p>
+                        <p>Nesses casos, o cálculo do logaritmo discreto ainda é muito custoso computacionalmente</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Assimétrica</h3>
+                        <h4>Mas como pode uma chave ser usada para ler e outra para escrever?</h4>
+                        <p>
+                            Em ambos os casos, a segurança se baseia no fato das operações reversas serem muito custosas
+                            com o poder computacional existente
+                        </p>
+                        <p class="fragment">
+                            Já existem estudos de criptografia pós-quântica para resistirem a ataques de computadores
+                            quânticos
+                        </p>
+                    </section>
+
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h3 class="subtitle">Criptografia Assimétrica</h3>
+                        <h4>Abordagem híbrida</h4>
+                        <p>
+                            Na prática, por causa de limitações do tamanho do texto a ser cifrado em alguns algoritmos
+                            <em class="smaller">
+                                (como no RSA, que com chaves de 2048 bits só permite cifrar blocos de até 214 bytes)
+                            </em> e por serem mais lentos na maioria dos casos, o que geralmente acontece é:
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h3 class="subtitle">Criptografia Assimétrica</h3>
+                        <h4>Abordagem híbrida</h4>
+                        <ol class="margin">
+                            <li>
+                                É gerada uma chave secreta <em class="smaller">(aleatória e única para a sessão)</em>
+                            </li>
+                            <li class="fragment">
+                                Usa-se Criptografia Simétrica para criptografar o texto plano
+                            </li>
+                            <li class="fragment">
+                                Usa-se Criptografia Assimétrica para criptografar a chave gerada
+                            </li>
+                        </ol>
+                    </section>
+                    <!-- Criptografia Assimétrica -->
+                </section> <!-- Tipos de Criptografia -->
+
+                <section> <!-- Hashing -->
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h2>Hashing</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Hashing</h2>
+                        <blockquote>
+                            é uma função que mapeia dados de tamanho arbitrário para dados de tamanho fixo
+                        </blockquote>
+                        <a href="https://en.wikipedia.org/wiki/Hash_function" target="_blank" rel="noopener"
+                           class="small">
+                            Wikipedia
+                        </a>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Hashing</h2>
+                        <p>Os algoritmos mais comuns são:</p>
+                        <ul>
+                            <li>CRC</li>
+                            <li>MD5</li>
+                            <li>SHA-1</li>
+                            <li>SHA-256</li>
+                            <li>SHA-512</li>
+                            <li class="opacity-0">RIPEMD-160</li>
+                            <li class="opacity-0">Whirlpool</li>
+                            <li class="opacity-0">BLAKE3</li>
+                        </ul>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Hashing</h2>
+                        <p>Para fins de segurança, devemos optar por:</p>
+                        <ul>
+                            <li class="fragment highlight-strikethrough">CRC</li>
+                            <li class="fragment highlight-strikethrough">MD5</li>
+                            <li class="fragment highlight-strikethrough">SHA-1</li>
+                            <li>SHA-256</li>
+                            <li>SHA-512</li>
+                            <li class="fragment">RIPEMD-160</li>
+                            <li class="fragment">Whirlpool</li>
+                            <li class="fragment">BLAKE3</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Hashing</h2>
+                        <h3>Integridade + Autenticidade</h3>
+                        <p>
+                            Apenas criptografar sem fazer o <em>hash</em> não é o suficiente, pois algum agente
+                            malicioso pode alterar a mensagem
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Hashing</h2>
+                        <h3>Integridade + Autenticidade</h3>
+                        <video controls>
+                            <source src="img/encrypt-without-hash.mp4">
+                        </video>
+                        <p class="small">Demonstração simples de <em>bit flipping</em></p>
+                    </section>
+                </section> <!-- Hashing -->
+
+                <section> <!-- Defesas -->
+                    <section>
+                        <h2>Defesas</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Cultura</h3>
+                        <p>
+                            Segurança deve ser parte da cultura da empresa, sendo responsabilidade de todos e não
+                            somente às áreas de desenvolvimento, infraeestrutura e afins
+                        </p>
+                        <p>
+                            Tenha estratégias para responder aos incidentes em seu <em>squad</em>
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Cultura</h3>
+                        <p>Alguns modelos que trazem segurança aos seus processos:</p>
+                        <ul>
+                            <li>
+                                <a href="https://www.devsecops.org/" target="_blank" rel="noopener">
+                                    DevSecOps
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.bsimm.com/" target="_blank" rel="noopener">
+                                    Building Security In Maturity Model (BSIMM)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.trio.dev/blog/secure-sdlc" target="_blank" rel="noopener">
+                                    Secure Software Development Life Cycle (SSDLC)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://owasp.org/www-project-samm/" target="_blank" rel="noopener">
+                                    OWASP Software Assurance Maturity Model (SAMM)
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Educação</h3>
+                        <p>
+                            Capacitações e reciclagem sobre melhores práticas, ataques e defesas devem acontecer de
+                            forma periódica
+                        </p>
+                        <p>
+                            Faça simulações de <em>phishing</em> para manter a equipe atenta
+                        </p>
+
+                        <a href="https://www.onwardly.io/post/taking-a-people-centric-approach-to-security"
+                           target="_blank" rel="noopener">
+                            Onwardly: Taking a people-centric approach to security
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Engenharia social</h3>
+                        <p>
+                            Conscientize equipes sobre esse ataque e incorpore à cultura da empresa técnicas de proteção
+                        </p>
+
+                        <a href="https://www.kaspersky.com.br/resource-center/threats/how-to-avoid-social-engineering-attacks"
+                           target="_blank" rel="noopener">
+                            Kaspersky: Engenharia social
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Modelagem de ameaças</h3>
+                        <p>
+                            Pratique essa análise durante o ciclo de vida de seus sistemas, identificando potenciais
+                            riscos e suas consequências
+                        </p>
+
+                        <a href="https://en.wikipedia.org/wiki/Threat_model" target="_blank" rel="noopener">
+                            Threat model
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Mantenha sua infraestrutura simples</h3>
+                        <p>
+                            Aplique o princípio KISS <em>(Keep It Simple, Stupid!)</em> para não deixar sua
+                            infraestrutura mais complexa que o necessário e, portanto, mais difícil de monitorar e proteger
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/KISS_principle" target="_blank" rel="noopener">
+                            KISS
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Segurança em camadas</h3>
+                        <p>
+                            Lista com as principais vulnerabilidades de aplicações Web lançada a cada quatro anos, sendo
+                            a última versão a de 2021
+                        </p>
+
+                        <a href="https://www.cloudflare.com/pt-br/learning/security/glossary/what-is-defense-in-depth/"
+                           target="_blank" rel="noopener">
+                            CloudFlare: O que é defesa em profundidade? | Segurança em camadas
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>OWASP Top 10</h3>
+                        <p>
+                            Lista com as principais vulnerabilidades de aplicações Web lançada a cada quatro anos, sendo
+                            a última versão a de 2021
+                        </p>
+
+                        <a href="https://owasp.org/top10" target="_blank" rel="noopener">
+                            owasp.org/top10
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>OWASP Vulnerable Web Applications Directory</h3>
+                        <p>
+                            Utilize aplicações vulneráveis para testar seus conhecimentos de segurança
+                        </p>
+                        <blockquote class="small mb-0">
+                            A melhor defesa é o ataque
+                        </blockquote>
+                        <p class="smaller cite">&mdash; Alguém, em algum momento na história</p>
+
+                        <a href="https://owasp.org/www-project-vulnerable-web-applications-directory/"
+                           target="_blank" rel="noopener">
+                            owasp.org
+                        </a>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Gestão de usuários</h3>
+                        <p>
+                            Não utilize superusuários (como o <em>root</em>) e crie usuários nominais para cada pessoa
+                            que precisa ter acesso ao serviço, com o mínimo de permissões necessárias
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Gestão de usuários</h3>
+                        <div class="d-flex half-columns align-start">
+                            <div>
+                                <h4>Prós</h4>
+                                <p>Acesso individualizado gera melhores registros de auditoria</p>
+                                <p>Privilégio mínimo minimiza ações inesperadas</p>
+                            </div>
+                            <div>
+                                <h4>Contras</h4>
+                                <p>Maior burocracia para criação e gerenciamento desses usuários</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Gestão de usuários</h3>
+                        <p>Soluções:</p>
+                        <ul>
+                            <li>
+                                <a href="https://www.ibm.com/guardium" target="_blank" rel="noopener">
+                                    IBM Guardium
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aws.amazon.com/pt/premiumsupport/technology/trusted-advisor/"
+                                   target="_blank" rel="noopener">
+                                    AWS Trusted Advisor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://azure.microsoft.com/en-us/solutions/governance/" target="_blank"
+                                   rel="noopener">
+                                    Azure Governance
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cloud.google.com/solutions/security-and-resilience" target="_blank"
+                                   rel="noopener">
+                                    Google Cloud Security and resilience framework
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Rotatividade de credenciais</h3>
+                        <p>
+                            Crie políticas para rotacionar credenciais de acesso, como <em>access keys</em> de serviços,
+                            usuários/senhas de servidores/bancos de dados e acesso físico
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Rotatividade de credenciais</h3>
+                        <div class="d-flex half-columns align-start">
+                            <div>
+                                <h4>Prós</h4>
+                                <p>Vazamentos de credenciais possuem um tempo limitado de validade</p>
+                            </div>
+                            <div>
+                                <h4>Contras</h4>
+                                <p>Burocracia, trabalho manual ou necessário criar rotinas de automação</p>
+                                <p>Frustrações durante suporte se não houver procedimentos corretos</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Rotatividade de credenciais</h3>
+                        <p>Soluções:</p>
+                        <ul>
+                            <li>
+                                <a href="https://www.hashicorp.com/products/vault" target="_blank" rel="noopener">
+                                    HashiCorp Vault
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"
+                                   target="_blank" rel="noopener">
+                                    AWS SecretsManager
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://learn.microsoft.com/en-us/azure/key-vault/" target="_blank"
+                                   rel="noopener">
+                                    Azure Key Vault
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cloud.google.com/secret-manager" target="_blank" rel="noopener">
+                                    Google Cloud Secret Manager
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3 class="opacity-0">Enumeração de usuários</h3>
+                        <p>
+                            O que um sistema que rode o código a seguir pode dar de informação a um atacante?
+                        </p>
+                        <pre><code class="javascript" data-line-numbers data-trim>
+                            function login(username, password) {
+                                const user = this.findByUsername(username);
+                                if (!user) {
+                                    return false;
+                                }
+
+                                if (!this.verifyPassword(password, user.password)) {
+                                    return false;
+                                }
+
+                                return true;
+                            }
+                        </code></pre>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Enumeração de usuários</h3>
+                        <p>
+                            É possível saber que usuários existem em sua aplicação através de <em>Timing
+                            attacks</em>, já que o tempo de resposta é diferente entre existentes ou não
+                        </p>
+
+                        <a href="https://blog.nviso.eu/2018/08/21/openssh-user-enumeration-vulnerability-a-close-look/"
+                           target="_blank" rel="noopener">
+                            OpenSSH User Enumeration Vulnerability: a Close Look
+                        </a>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Enumeração de usuários</h3>
+                        <p>Código vulnerável a <em>timing attacks</em></p>
+                        <pre data-id="pre"><code class="javascript" data-line-numbers data-trim>
+                            function login(username, password) {
+                                const user = this.findByUsername(username);
+                                if (!user) {
+                                    return false;
+                                }
+
+                                if (!this.verifyPassword(password, user.password)) {
+                                    return false;
+                                }
+
+                                return true;
+                            }
+                        </code></pre>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Enumeração de usuários</h3>
+                        <p>Código resistente a <em>timing attacks</em></p>
+                        <pre data-id="pre"><code class="javascript" data-line-numbers data-trim>
+                            function login(username, password) {
+                                const user = this.findByUsername(username);
+
+                                // this.generateFakePassword = () => 'abcdefg123456'
+                                let storedPassword = this.generateFakePassword();
+                                if (user !== null) {
+                                    storedPassword = user.password;
+                                }
+
+                                return (this.verifyPassword(password, storedPassword))
+                                    && (user !== null);
+                            }
+                        </code></pre>
+                    </section>
+
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Timing Attacks</h3>
+                        <p>Use comparações de tempo constante entre <em>hashes</em></p>
+                        <pre><code class="php" data-trim>
+                            // Ao invés de if ($hash1 === $hash2) {
+                            if (hash_equals($hash1, $hash2)) {
+                                // ...
+                            }
+                        </code></pre>
+                        <a href="https://www.php.net/manual/en/function.hash-equals.php" target="_blank" rel="noopener"
+                           class="smaller">PHP</a>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="subtitle">Defesas</h2>
+                        <h3>Timing Attacks</h3>
+                        <p>Use comparações de tempo constante entre <em>hashes</em></p>
+                        <pre><code class="javascript" data-trim>
+                            const { timingSafeEqual } = require('crypto');
+                            const buffer1 = Buffer.from('hash1');
+                            const buffer2 = Buffer.from('hash2');
+
+                            // Ao invés de if (buffer1.equals(buffer2)) {
+                            let check = false;
+                            try {
+                                check = timingSafeEqual(buffer1, buffer2);
+                            } catch (err) {
+                                // false
+                            }
+                        </code></pre>
+                        <a href="https://nodejs.org/api/crypto.html" target="_blank" rel="noopener" class="smaller">
+                            Node.js
+                        </a>
+                    </section>
+
+                </section> <!-- Defesas -->
+
+                <section> <!-- Referências -->
+                    <section>
+                        <h2>Referências</h2>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Referências</h2>
+                        <h3>Bibliotecas</h3>
+                        <ul class="no-padding">
+                            <li>
+                                Multi-plataforma e recomendada:
+                                <a href="https://doc.libsodium.org/" target="_blank" rel="noopener">libsodium</a>
+                            </li>
+                            <li>
+                                Node.js:
+                                <a href="https://nodejs.org/api/crypto.html" target="_blank" rel="noopener">
+                                    módulo crypto
+                                </a>
+                            </li>
+                            <li>
+                                Node.js:
+                                <a href="https://www.npmjs.com/package/argon2" target="_blank" rel="noopener">
+                                    pacote argon2
+                                </a>
+                            </li>
+                            <li>
+                                Python:
+                                <a href="https://github.com/flamewow/argon2_py" target="_blank" rel="noopener">
+                                    pacote argon2
+                                </a>
+                            </li>
+                            <li>
+                                Go:
+                                <a href="https://github.com/tvdburgt/go-argon2" target="_blank" rel="noopener">
+                                    pacote argon2
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Referências</h2>
+                        <h3>Ferramentas</h3>
+                        <ul class="no-padding">
+                            <li>
+                                <a href="https://portswigger.net/burp" target="_blank" rel="noopener">
+                                    Burp Suite
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.elpescador.com.br/" target="_blank" rel="noopener">
+                                    El Pescador
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.kali.org/" target="_blank" rel="noopener">
+                                    Kali Linux
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.metasploit.com/" target="_blank" rel="noopener">
+                                    Metasploit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://pt-br.tenable.com/products/nessus" target="_blank" rel="noopener">
+                                    Nessus
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.openvas.org/" target="_blank" rel="noopener">
+                                    OpenVAS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.ossec.net/" target="_blank" rel="noopener">
+                                    OSSEC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://w3af.org/" target="_blank" rel="noopener">
+                                    w3af
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wazuh.com/" target="_blank" rel="noopener">
+                                    Wazuh
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Referências</h2>
+                        <h3>Leitura</h3>
+                        <ul>
+                            <li>
+                                <a href="https://en.wikipedia.org/wiki/Cryptanalysis" target="_blank" rel="noopener">
+                                    Wikipedia: Criptoanálise
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
+                                   target="_blank" rel="noopener">
+                                    Wikipedia: Diffie–Hellman key exchange
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cheatsheetseries.owasp.org/" target="_blank" rel="noopener">
+                                    OWASP Cheat Sheet Series
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://csrc.nist.gov/publications/detail/fips/140/3/final" target="_blank"
+                                   rel="noopener">
+                                    FIPS 140-3
+                                    <span class="smaller">(Security Requirements for Cryptographic Modules)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://paragonie.com/" target="_blank" rel="noopener">
+                                    Paragon Initiative
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="subtitle">Referências</h2>
+                        <h3>Vulnerabilidades</h3>
+                        <ul>
+                            <li><a href="https://snyk.io/vuln" target="_blank" rel="noopener">snyk</a></li>
+                            <li><a href="https://cve.mitre.org/" target="_blank" rel="noopener">CVE - Mitre</a></li>
+                        </ul>
+                    </section>
+                </section> <!-- Referências -->
+
+                <section> <!-- Obrigado -->
+                    <div class="d-flex">
+                        <p class="fw-bold my-0 text-center">Obrigado!</p>
+                        <div class="about-me-links">
+                            <div>
+                                <svg role="img" width="64px" height="64px" viewBox="0 0 24 24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                          class="fill"></path>
+                                </svg>
+                                <div>
+                                    <p>Slides &amp; GitHub</p>
+                                    <a href="https://github.com/vcampitelli" target="_blank" rel="noopener">
+                                        vcampitelli
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <svg role="img" width="64px" height="64px" viewBox="0 0 24 24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                                          class="fill"></path>
+                                </svg>
+                                <div>
+                                    <p>Twitter</p>
+                                    <a href="https://twitter.com/vcampitelli" target="_blank" rel="noopener">
+                                        vcampitelli
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <svg role="img" height="64" viewBox="0 0 74 74" width="64"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                                              class="fill"/>
+                                        <path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                                              class="fill-bg"/>
+                                    </g>
+                                </svg>
+                                <div>
+                                    <p>LinkedIn</p>
+                                    <a href="https://linkedin.com/in/viniciuscampitelli" target="_blank" rel="noopener">
+                                        Vinícius Campitelli
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> <!-- Obrigado -->
+            </div>
+        </div>
+        <script src="reveal.js/dist/reveal.js"></script>
+        <script src="reveal.js/plugin/highlight/highlight.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                mouseWheel: false,
+                plugins: [RevealHighlight]
+            });
+        </script>
+    </body>
+</html>
